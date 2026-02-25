@@ -17,7 +17,7 @@ Hi! Welcome to HOTHXIII’s Intro to AI workshop! In this session, we’ll explo
   - How AI works vs. Algorithms & Humans
   - Tokens
   - The Context Window
-- [Using AI in your project!](#demo-pasta-recipe-generator-with-gemini)
+- [Using AI in your project! (Demo with Gemini API!)](#demo-pasta-recipe-generator-with-gemini)
   - Using LLM APIs
   - Agentic Development & Context Engineering
 - [Student Offers](#student-offers)
@@ -121,7 +121,7 @@ Context engineering means intentionally shaping what the model "sees" in its con
 Take advantage of these deals to power your hackathon projects for free!
 * **Google Gemini for Students:** [Free 1 year of Gemini 3 Pro](https://gemini.google/students/)
 * **Cursor Pro for Students:** [Free 1 year of Cursor Pro](https://cursor.com/students)
-* **Claude Builder Club @ UCLA:** [Join for free Claude Pro & API credits](https://claude.ai/) (Check UCLA ACM Hack discord for the invite link!)
+* **Claude Builder Club @ UCLA:** Join for free Claude Pro & API credits
 * **GitHub Student Developer Pack:** Includes access to dozens of developer tools. [Claim here](https://education.github.com/pack)
 
 ---
