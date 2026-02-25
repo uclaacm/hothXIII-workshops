@@ -11,3 +11,5 @@ Hi! This workshop introduces the basics of front-end web development with HTML/C
 - [Workshop Recording]()
 
 ---
+Set Up
+1. Install both [VSCode]([url](https://code.visualstudio.com/)) and [Chrome]([url](https://www.google.com/chrome/))
