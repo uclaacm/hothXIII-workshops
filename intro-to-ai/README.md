@@ -81,7 +81,6 @@ Add the following code to your `main.py`. This script uses the `google-genai` li
 ~~~python
 from dotenv import load_dotenv
 from google import genai
-import os
 
 # This loads the GEMINI_API_KEY from your .env file
 load_dotenv() 
