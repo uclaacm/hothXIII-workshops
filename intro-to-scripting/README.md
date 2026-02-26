@@ -2,7 +2,7 @@
 
 **Date of Workshop:** Sunday, March 1, 2026
 
-**Teacher:** [Mark Mairs](https://github.com/Mekski)
+**Teacher:** [Jaivin Phabiani](https://github.com/JaivinP)
 
 Hi! Welcome to HOTHXIII’s Intro to AI workshop! In this session, we’ll explore the fundamentals of what Artificial Intelligence (AI) is, how it differs from traditional algorithms and human thinking, and how to integrate AI into your own projects using Google Gemini’s API. Whether you’re new to AI or looking to understand how models like artificial intelligence works under the hood, this workshop will help you get started. Let’s begin!
 
