@@ -1,6 +1,6 @@
 # HOTHXIII Intro to React Native
 
-**Date of Workshop:** TBD
+**Date of Workshop:** Sunday, March 1 2026
 
 **Teacher:** Benjamin Garcia
 
