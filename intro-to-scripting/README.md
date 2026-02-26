@@ -1,128 +1,225 @@
-# HOTHXIII Intro to AI
+# HOTHXIII Intro to Scripting
 
 **Date of Workshop:** Sunday, March 1, 2026
 
-**Teacher:** [Jaivin Phabiani](https://github.com/JaivinP)
+**Teacher:** [Jaivin](https://github.com/JaivinP)
 
-Hi! Welcome to HOTHXIII’s Intro to AI workshop! In this session, we’ll explore the fundamentals of what Artificial Intelligence (AI) is, how it differs from traditional algorithms and human thinking, and how to integrate AI into your own projects using Google Gemini’s API. Whether you’re new to AI or looking to understand how models like artificial intelligence works under the hood, this workshop will help you get started. Let’s begin!
+Hi! Welcome to HOTHXIII's Intro to Scripting workshop! In this session, we'll cover what scripting is, why Python is the go-to language for it, and how to use scripts to scrape data from the web. Whether you've never written a Python script before or just want to get more comfortable with it, this workshop will give you tools you can use tonight. Let's get into it!
 
-## Resources:
+## Resources
 
-- [Slides](https://docs.google.com/presentation/d/1-NhOcMH48Ei7SCf6_vpumUbxGLTfxohckF6xGwhjOw4/edit?usp=sharing)
+- [Slides](https://docs.google.com/presentation/d/1WHTzUVPTG6G0RGvZXPPTqRTU5MIq7PPcr2xHmmIjtv0/edit?slide=id.p1#slide=id.p1)
 - [Workshop Recording]()
 
-## Overview:
+## Overview
 
-- [What is AI?](#what-is-ai)
-  - How AI works vs. Algorithms & Humans
-  - Tokens
-  - The Context Window
-- [Using AI in your project! (Demo with Gemini API!)](#demo-pasta-recipe-generator-with-gemini)
-  - Using LLM APIs
-  - Agentic Development & Context Engineering
-- [Student Offers](#student-offers)
-
-## What is AI?
-
-Artificial Intelligence (AI) models are trained on massive datasets to learn patterns and use those patterns to make predictions. Unlike traditional **Algorithms**, which follow fixed, step-by-step rules to produce the same output every time (like a strict pasta recipe), AI uses probability to choose the most likely next step based on what it has "seen" before.
-
-While **Humans** adapt using memory, senses, and judgment, AI predicts patterns without a true "understanding" of the task—it simply knows that in millions of examples, certain pieces of information often follow others.
-
-### Tokens
-AI doesn't read text in words or sentences like we do; it sees **Tokens**.
-* Everything you give to an AI is converted into tokens before being processed.
-* For reference, 100 tokens is approximately equal to 75 English words.
-* AI generates text by predicting the next small token, over and over again.
-
-### The Context Window
-The **Context Window** is the maximum number of tokens a model can "see" and process at one single time.
-* This window includes your input (the prompt) AND the model's output.
-* Modern models have massive windows; for example, Gemini 3 Pro can handle 2 million tokens.
-* If a conversation exceeds this limit, the model starts to "forget" the earliest parts of the chat.
-
-## Demo: Pasta Recipe Generator with Gemini
-
-### Step 1: Open your IDE!
-I'll be using **VS Code**, but you can use any editor like **Cursor**. Make sure you have your terminal open!
-
-### Step 2: Make the project folder
-Create a new directory for your project to keep things organized. Run these commands in your terminal:
-~~~bash
-mkdir HackDemo
-cd HackDemo
-~~~
-
-### Step 3: Create your files
-You need a Python file for your code and a `.env` file to keep your API key secure. You can click "New File" in your IDE or use the terminal:
-~~~bash
-touch .env
-touch main.py
-~~~
-
-### Step 4: Install Dependencies & get your API key
-Run this command to install the Google GenAI and environment variables libraries:
-~~~bash
-pip install -U google-genai python-dotenv
-~~~
-
-**Get your Key:**
-1. Go to [https://aistudio.google.com/api-keys](https://aistudio.google.com/api-keys).
-2. Click **"Create API Key"**.
-3. Copy it and **never share it**!
-
-### Step 5: Configure your Environment
-Open your `.env` file and add your key. It should look like this:
-~~~env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-~~~
-
-### Step 6: Write the Python Script
-Add the following code to your `main.py`. This script uses the `google-genai` library to talk to the model:
-~~~python
-from dotenv import load_dotenv
-from google import genai
-
-# This loads the GEMINI_API_KEY from your .env file
-load_dotenv() 
-
-# The client reads the key from your environment
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-
-response = client.models.generate_content(
-    model="gemini-3-flash-preview",
-    contents="Give me a simple pasta recipe for beginners. Keep it under 8 steps."
-)
-
-print(response.text)
-~~~
-
-### Step 7: Run your program!!!
-In your terminal, run:
-~~~bash
-python3 main.py
-~~~
-
-## Agentic Development & Context Engineering
-
-### Agentic Development
-Agentic development is the transition from a passive code assistant to an autonomous agent. This works because the language model is not just generating text; it is connected to **tools**.
-* **MCP (Model Context Protocol):** A way to expose capabilities like reading/writing files and running commands to the model.
-* **Autonomous Action:** This allows the AI to take actions inside your IDE instead of just responding in a chat window. 
-* **The Loop:** When we combine a language model with tool access and run it in a **Goal → Think → Act → Observe** loop, we get agentic behavior.
-
-### Context Engineering
-Context engineering means intentionally shaping what the model "sees" in its context window. Instead of letting raw prompts and tool outputs accumulate uncontrollably, we decide what matters to keep the model focused. 
-* **Selection:** Choosing only the relevant files or information needed for the task.
-* **Summarization:** Condensing long conversation histories to save token space.
-* **Noise Reduction:** Removing unnecessary data to increase clarity and reduce hallucinations.
-* **Constraint Preservation:** Ensuring the model remembers important rules or project requirements.
-
-## Student Offers
-Take advantage of these deals to power your hackathon projects for free!
-* **Google Gemini for Students:** [Free 1 year of Gemini 3 Pro](https://gemini.google/students/)
-* **Cursor Pro for Students:** [Free 1 year of Cursor Pro](https://cursor.com/students)
-* **Claude Builder Club @ UCLA:** Join for free Claude Pro & API credits
-* **GitHub Student Developer Pack:** Includes access to dozens of developer tools. [Claim here](https://education.github.com/pack)
+- [What is Scripting?](#what-is-scripting)
+  - Scripting vs. Compiled Languages
+  - Why Python?
+- [Python Refresher](#python-refresher)
+  - Variables and Print
+  - If/Else and Loops
+  - Functions
+- [Web Scraping](#web-scraping)
+  - What is Web Scraping?
+  - How will we web scrape?
+  - HTML Tags
+  - Things to keep in mind
 
 ---
+
+## What is Scripting?
+
+A script is a small program written to automate tasks. Instead of doing something manually over and over, you write a set of instructions and let the computer execute them.
+
+Examples of what scripting can do:
+- Rename 500 files at once
+- Scrape data from a website
+- Send automated emails
+- Transform and clean CSV data
+
+### Scripting vs. Compiled Languages
+
+When you write Python, your code is executed line by line by an **interpreter** — there's no separate build step. This is different from compiled languages like C++, where your source code gets translated into machine code before it ever runs.
+
+| C++ | Python |
+|---|---|
+| Compiled language | Interpreted |
+| Translated to machine code | Runs line by line |
+| Very fast | Slower |
+| More complex to write | Easier to iterate |
+
+**The analogy:** C++ is like building furniture from scratch — you have total control but it takes time and expertise. Python is like flat-pack furniture — you follow the instructions and it just works.
+
+```cpp
+// C++ — you manage your own memory
+int* x = new int(5);
+// delete x;  → forget this and you have a memory leak
+```
+
+```python
+# Python — no manual memory management
+x = 5
+```
+
+### Why Python?
+
+- Beginner-friendly and reads close to plain English
+- Massive library ecosystem for almost any task
+- Used across machine learning, web development, and automation
+- Fast to write, fast to test — perfect for a hackathon
+
+---
+
+## Setup
+
+Make sure Python is installed. If not, download it at https://www.python.org/downloads/. During installation on Windows, check **"Add Python to PATH"**.
+
+Verify it works:
+```bash
+python3 --version
+```
+
+Install the libraries used in this workshop:
+```bash
+pip3 install requests beautifulsoup4
+```
+
+---
+
+## Python Refresher
+
+### Variables and Print
+
+```python
+print("Hello HOTH")
+
+name = "Max Zhang"
+age = 21
+score = 98.5
+
+print(f"My name is {name}, I am {age} years old and scored a {score} on my last CS test!")
+```
+
+Output:
+```
+Hello HOTH
+My name is Max Zhang, I am 21 years old and scored a 98.5 on my last CS test!
+```
+
+### If/Else and Loops
+
+```python
+score = 85
+
+if score > 90:
+    print("A")
+else:
+    print("Keep pushing!")
+
+for i in range(5):
+    print("Building something cool...")
+```
+
+Output:
+```
+Keep pushing!
+Building something cool...
+Building something cool...
+Building something cool...
+Building something cool...
+Building something cool...
+```
+
+### Functions
+
+```python
+def greet(name):
+    print("Hello", name)
+
+greet("Hackers")
+```
+
+Output:
+```
+Hello Hackers
+```
+
+---
+
+## Web Scraping
+
+### What is Web Scraping?
+
+Web scraping is using automated tools/scripts to extract data from websites (usually in HTML) and processing that data into a form that you need.
+
+Real use cases: market research, Bruin Dining menus, news aggregation, feeding data into AI agents.
+
+Common tools: **BeautifulSoup** (what we use in this workshop), Scrapy, and Selenium.
+
+### How will we web scrape?
+
+We use **BeautifulSoup**, a Python package that parses HTML and lets you search through it to find the data you want. Combined with **requests** (which fetches the page), you have everything you need.
+
+Install:
+```bash
+pip3 install requests beautifulsoup4
+```
+
+Basic pattern:
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://wikipedia.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+headings = soup.find_all("div")
+
+for heading in headings:
+    print(heading.text.strip())
+```
+
+### HTML Tags
+
+HTML is the structure of every webpage. BeautifulSoup searches through these tags to find your data. Here are the most common ones:
+
+| Tag | Description |
+|---|---|
+| `<html>` | Declares the page as HTML |
+| `<head>` | Contains page metadata |
+| `<body>` | Contains the visible content |
+| `<h1>` to `<h6>` | Headings of different sizes |
+| `<p>` | A paragraph |
+| `<div>` | A generic container block |
+| `<a href="...">` | A hyperlink |
+| `<img src="...">` | An image |
+| `<ul>` / `<ol>` | Unordered / ordered list |
+| `<li>` | A list item |
+| `<b>` | Bold text |
+| `<i>` | Italic text |
+
+When scraping, you use these tag names and their CSS classes to target exactly the data you want.
+
+### Keep in mind
+
+Web scraping is harder than it looks in demos. The site used in this workshop was built specifically to be scraped. Real websites are a different story.
+
+- Many sites use CAPTCHAs and other anti-bot measures that will block your scraper
+- Sites that load content with JavaScript won't work with BeautifulSoup alone — you'd need tools like Selenium or Playwright
+- Always scrape responsibly: only scrape public data, check a site's `robots.txt` file, and add a small delay between requests so you're not overwhelming the server
+
+---
+
+## Resources
+
+- Python documentation: https://docs.python.org/3/
+- BeautifulSoup documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+- Requests library: https://requests.readthedocs.io/
+- Practice scraping (quotes): https://quotes.toscrape.com
+- Practice scraping (books): https://books.toscrape.com
+- HOTH XII Scripting Workshop (last year): https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-scripting
+
+---
+
 Good luck and Happy Hacking!
