@@ -2,7 +2,7 @@
 
 **Date of Workshop:**
 
-**Teacher:**
+**Teacher: Benjamin Garcia**
 
 **Description:**
 
