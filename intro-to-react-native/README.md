@@ -2,7 +2,7 @@
 
 **Date of Workshop:** Sunday, March 1 2026
 
-**Teacher:** Benjamin Garcia
+**Teacher:** [Benjamin Garcia](https://www.bentgarcia.com)
 
 Hi! Welcome to the Intro to React Native workshop. In this session, we'll cover the React Native basics and build a mini mobile app called **Hack Checklist** using Expo. You'll learn how to structure UI with core components, manage state with hooks, and break your app into reusable pieces.
 
