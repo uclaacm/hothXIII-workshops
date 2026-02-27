@@ -12,7 +12,7 @@ Hi! This workshop introduces the basics of front-end web development with HTML/C
 
 ---
 ### Set Up
-1. Install both [VSCode]([url](https://code.visualstudio.com/)) and [Chrome]([url](https://www.google.com/chrome/))
+1. Install both [VSCode]((https://code.visualstudio.com/)) and [Chrome]((https://www.google.com/chrome/))
 ---
 ### HTML 
 HTML (Hypertext Markup Language) defines the basic structure of a website. HTML is like the skeleton for your site. Using **tags**, you can explicitly define what type of text or icons are displayed. For example, using a button tag, you can display a button. 
@@ -98,6 +98,136 @@ There are 3 ways to style your HTML file with CSS
 1. **Inline**: Add styles directly to HTML elements (limited use).
 2. **Internal**: Put styles inside the HTML file in a <style> tag.
 3. **External**: Create a separate CSS file (.css) and link it to your HTML.
+
+**Inline**
+```html
+<!-- HTML File -->
+...
+<body>
+    <h1 style ="color: green;">This text is green.</p>
+</body>
+...
+</html>
+```
+**Internal**
+```html
+<!-- HTML File -->
+...
+<body>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</body>
+</html>
+
+```
+
+**External**
+```html
+<!-- HTML File -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+<!-- Import CSS File named style.css Here -->
+    <link rel="stylesheet" href="style.css" />
+...
+</head>
+...
+</html>
+```
+```html
+<!-- CSS File -->
+h1 {
+    color: green;
+}
+
+```
+
+In the above examples, we referred to the h1 element and changed the **property** of color to green.
+
+### Properties to Know
+
+* font-family
+* font-size
+* font-weight
+* color
+* background-color
+* text-align
+* border
+* border-radius
+* border-color
+* box-shadow
+* display
+* flex
+* margin
+* padding
+
+### Class vs ID Attribute
+
+#### Class
+Attribute for multiple elements. All elements labeled under one class will be modified.
+```html
+<!-- .html -->
+<body>
+    <h1 class="center">Unaffected</h1>
+    <p class="center">Red and centered</p>
+    <p class="center large">Large, red, & center</p> 
+</body>
+```
+```html
+<!-- .css -->
+<style>
+    p.center {
+        text-align: center;
+        color: red;
+    }
+    p.large {
+      font-size: 300%;
+    }
+</style>
+```
+[Click here](https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_element_class2) to see the effect.
+
+#### ID
+Unique attribute for the element. Thus, in the CSS file, only this specific element will be modified.
+```html
+<!-- .html -->
+<body>
+    <p id="para1">Hello World!</p>
+    <p>This paragraph is not affected by the style.</p>
+</body>
+
+```
+```html
+<!-- .css -->
+<style>
+    #para1 {
+      text-align: center;
+      color: red;
+    }
+</style>
+```
+[Click here](https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_id) to see the effect.
+
+### Creating a Linked CSS File
+1. Make sure you are in the same project as earlier, with the index.html
+2. Create a new file named **style.css**
+3. Go back to the index.html file and paste the following under the title tag:
+```html
+<link rel="stylesheet" href="style.css" />
+```
+
+
+
+
+
+
 
 
 
