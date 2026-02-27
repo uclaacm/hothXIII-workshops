@@ -5,7 +5,7 @@
 
 **Teacher:** [Kaelyn Yang](https://github.com/Kaelynsyang)
 
-Hello! Welcome to the Intro to Databases workshop for HOTHXIII. We will go over what databases are and their purposes, as well as CRUD operations. Additionally, you will learn how to set up your own database with MongoDB and use CRUD.
+Hello! Welcome to the Intro to Databases workshop for HOTHXIII. We will go over what databases are, different types, purposes of databases, and CRUD operations. Additionally, you will learn how to set up your own database with MongoDB and use CRUD.
 
 ## Resources
 - [Slides](https://docs.google.com/presentation/d/1H2r-xmcuVzgbgcm5AJ80XMWF14bbiljHozk_ZpuBycw/edit?usp=sharing)
@@ -50,12 +50,11 @@ They can include tables with rows and columns, indexes that allow for easier acc
 The different types of Databases that we will be focusing on are SQL and noSQL. To be more specific, SQL is a type of relational database, while noSQL is a non-relational database.
 
 Relational has predefined categories, data consistency, accuracy and reliability, and complex queries. 
-While on the other hand, non relational databases are great for large data volume, low latency (not much delay), flexible data models, reading and writing data.
+While on the other hand, non relational databases are great for large data volume, low latency (not much delay), flexible data models, reading and writing data. The similarities is that they both are able to store data, use CRUD operations which we will get into, secure, and use indexes for efficiency.
 
-The similarities is that they both are able to store data, use CRUD operations which we will get into, secure, and use indexes for efficiency.
+**SQL (Structured Query Language) Examples:** Banking Systems, University Systems
 
-SQL (Structured Query Language) Examples: Banking Systems, University Systems
-noSQL Examples: Catalog management, Chat Applications, E-commerce or online shopping
+**noSQL Examples:** Catalog management, Chat Applications, E-commerce or online shopping
 
 ---
 
@@ -161,7 +160,7 @@ cd backend
 npm init -y
 npm install express mongoose cors dotenv
 ```
-Create an index.js and .env file
+Create an index.js and .env file as well!
 
 ### Step 2: Create a schema
 
@@ -186,7 +185,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const StudentModel = require('./models/studentSchema');
+//const StudentModel = require('./models/studentSchema');
+//If you want to test your CRUD operations here, make sure you include the directory to the schema file
 
 dotenv.config();
 
@@ -206,69 +206,9 @@ app.get("/", (req, res) => {
     res.send("API is running...");
 });
 
-app.post('/save', async (req, res) => {
-    try {
-        console.log("Received body:", req.body);
-
-        const newStudent = new StudentModel(req.body);
-        const savedStudent = await newStudent.save();
-
-        console.log("Saved:", savedStudent);
-        res.send("Data inserted");
-    } catch (err) {
-        console.error("Save failed:", err);
-        res.status(500).send("Error inserting data");
-    }
-});
-
-app.get('/findall', async (req, res) => {
-    try {
-        const students = await StudentModel.find();
-        res.send(students);
-    } catch (err) {
-        console.error("Find all failed:", err);
-        res.status(500).send("Error fetching data");
-    }
-});
-
-app.post('/delete', async (req, res) => {
-    try {
-        const deletedStudent = await StudentModel.findByIdAndDelete(req.body.id);
-        if (!deletedStudent) {
-            return res.status(404).send("Student not found");
-        }
-        console.log("Data Deleted!");
-        res.send(deletedStudent);
-    } catch (err) {
-        console.error("Delete failed:", err);
-        res.status(500).send("Error deleting data");
-    }
-});
-
-app.post('/update', async (req, res) => {
-    try {
-        const updatedStudent = await StudentModel.findByIdAndUpdate(
-            req.body.id,
-            { Name: req.body.Name },
-            { new: true } // returns the updated document
-        );
-
-        if (!updatedStudent) {
-            return res.status(404).send("Student not found");
-        }
-
-        console.log("Data updated!");
-        res.send(updatedStudent);
-    } catch (err) {
-        console.error("Update failed:", err);
-        res.status(500).send("Error updating data");
-    }
-});
-
 app.listen(PORT, () => {
     console.log('Server running on port ' + PORT);
 });
-
 ```
 
 You can use CRUD operations with [Postman](https://www.postman.com/) to make sure it works. Postman is a database API testing tool.
