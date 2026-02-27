@@ -11,10 +11,10 @@ Hi! This workshop introduces the basics of front-end web development with HTML/C
 - [Workshop Recording](https://drive.google.com/file/d/1JhmP0f4j78mCIR90n1I2DL3FcHw0ipwx/view?usp=sharing)
 
 ---
-### Set Up
+## Set Up
 1. Install both [VSCode]((https://code.visualstudio.com/)) and [Chrome]((https://www.google.com/chrome/))
 ---
-### HTML 
+## HTML 
 HTML (Hypertext Markup Language) defines the basic structure of a website. HTML is like the skeleton for your site. Using **tags**, you can explicitly define what type of text or icons are displayed. For example, using a button tag, you can display a button. 
 
 **Tags** explicitly define what type of text is on screen. 
@@ -90,9 +90,9 @@ The following are very important attributes:
 ```
 5. Open the folder on your machine -> open index.html
 6. Chrome will open up with your site!
-7. 
+
 ---
-### CSS 
+## CSS 
 CSS (Cascading Style Sheets) stylizes your HTML file by changing the colors, font, sizes, and more! This is like adding the skin and clothes to your website.
 
 There are 3 ways to style your HTML file with CSS
@@ -224,7 +224,7 @@ Unique attribute for the element. Thus, in the CSS file, only this specific elem
 <link rel="stylesheet" href="style.css" />
 ```
 ---
-### JS
+## JS
 JS (JavaScript) makes your website interactive and dynamic! This is like adding the brain to your website.
 
 ### Syntax
@@ -292,7 +292,7 @@ while (i < condition) {
 
 In JavaScript, to define a function, you use the **keyword** ```function``` followed by the function's name, then an opening curly bracket, then the statements to execute, and finally a closing curly bracket.
 
-```
+```js
 function name {
 	...
 }
@@ -311,17 +311,25 @@ To access the properties or methods, we use **“dot-notation”**
 **DOM** (Document Object Model) is used to access different elements in the document from different files. For example, in our JS file, we can access specific elements by their ID and modify them. This makes our site more dynamic.
 
 We can use DOM to  access elements of HTML:
-
-	const button = document.getElementByID(ID)
+```js
+const button = document.getElementByID(ID)
+```
 	
 We can use DOM to create or change elements of HTML:
-
-	document.getElementById("ID").innerHTML = “New Text”;
+```js
+document.getElementById("ID").innerHTML = “New Text”;
+```
 
 #### Events
 **Events** listen for a trigger and then perform some action. 
-
-
+```js
+const button = document.getElementById("click me");
+// Let button listen for mouseover
+button.addEventListener("click", function () {
+  button.innerHTML = "I have been clicked";
+});
+```
+Here, we are adding an event listener that listens for a click. Once the button is clicked, the text inside the button is updated.
 
 
 ### Creating a Linked JS File
@@ -331,6 +339,13 @@ We can use DOM to create or change elements of HTML:
 ```html
 <script src="script.js" />
 ```
+---
+## Closing Notes
+This was just an introduction to HTML/CSS/JS. There is so much more to learn. Visit the following resources to learn more!
+* [Frontend Basics](https://www.geeksforgeeks.org/javascript/learn-web-development-basics-with-html-css-and-javascript/)
+* [HTML Basics](https://www.w3schools.com/html/)
+* [CSS Basics](https://www.w3schools.com/css/default.asp)
+* [JS Basics](https://www.w3schools.com/js/)
 
 
 
