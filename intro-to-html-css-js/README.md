@@ -250,11 +250,11 @@ let fullName = name + “ “ + lastName;
 
 ```
 if (condition 1) {
-	…
+	...
 } else if (condition 2) {
-	…
+	...
 } else {
-	…
+	...
 }
 ```
 
@@ -276,24 +276,51 @@ switch (value) {
 
 ```
 for (initialize i; i < condition; update i {
-	…
+	...
 }
 ```
 
 ```
 initialize i;
 while (i < condition) {
-	…
+	...
   update i 
 }
 ```
 #### Functions
+**Functions** are generalized code blocks that can be called multiple times within your code to perform the same function. For example, if you are writing a complex math program, you might call a *simplify* function many times to simplify your equations by canceling and reducing. 
+
+In JavaScript, to define a function, you use the **keyword** ```function``` followed by the function's name, then an opening curly bracket, then the statements to execute, and finally a closing curly bracket.
+
+```
+function name {
+	...
+}
+```
 
 #### Objects
+**Objects** are *containers* that have *properties* and are accessed (and/or modified) via *methods*.
+Example:
+
+	Object: 						car
+	Properties (key.value): 		car.model, car.name, car.color
+	Methods (key.function): 		car.start(), car.stop(), car.brake()
+To access the properties or methods, we use **“dot-notation”**
 
 #### DOM
+**DOM** (Document Object Model) is used to access different elements in the document from different files. For example, in our JS file, we can access specific elements by their ID and modify them. This makes our site more dynamic.
+
+We can use DOM to  access elements of HTML:
+
+	const button = document.getElementByID(ID)
+	
+We can use DOM to create or change elements of HTML:
+
+	document.getElementById("ID").innerHTML = “New Text”;
 
 #### Events
+**Events** listen for a trigger and then perform some action. 
+
 
 
 
