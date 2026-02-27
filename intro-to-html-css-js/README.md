@@ -93,6 +93,7 @@ The following are very important attributes:
 7. 
 ---
 ### CSS 
+CSS (Cascading Style Sheets) stylizes your HTML file by changing the colors, font, sizes, and more! This is like adding the skin and clothes to your website.
 
 There are 3 ways to style your HTML file with CSS
 1. **Inline**: Add styles directly to HTML elements (limited use).
@@ -221,6 +222,87 @@ Unique attribute for the element. Thus, in the CSS file, only this specific elem
 3. Go back to the index.html file and paste the following under the title tag:
 ```html
 <link rel="stylesheet" href="style.css" />
+```
+---
+### JS
+JS (JavaScript) makes your website interactive and dynamic! This is like adding the brain to your website.
+
+### Syntax
+
+#### Literals
+**Literals** are fixed values: e.g.,
+* 10
+* 100.8373
+* "HOTH is cool!"
+
+#### Variables
+**Variables** are values that can be changed. There are two variable **keywords**: ```const``` and ```let```.
+```html
+let x = 5;
+const name = “Tonka”;
+const lastName = “Jahari”;
+let fullName = name + “ “ + lastName;
+```
+```const``` means that this variable CANNOT be later changed. On the otherhand, any ```let``` variable CAN be later changed.
+
+#### Conditionals
+**Conditional** statements like ```if-else``` statements or ```switch``` statements check whether a certain condition is true and executes the appropriate statements. 
+
+```
+if (condition 1) {
+	…
+} else if (condition 2) {
+	…
+} else {
+	…
+}
+```
+
+```
+switch (value) {
+  case 1:
+      ...
+      break;
+  case 2:
+      ...
+      break;
+  default:
+      ...
+}
+```
+
+#### Loops
+**Loops** like ```for``` loops or ```while``` repeat certain statements until a condition is met.
+
+```
+for (initialize i; i < condition; update i {
+	…
+}
+```
+
+```
+initialize i;
+while (i < condition) {
+	…
+  update i 
+}
+```
+#### Functions
+
+#### Objects
+
+#### DOM
+
+#### Events
+
+
+
+### Creating a Linked JS File
+1. Make sure you are in the same project as earlier, with the index.html
+2. Create a new file named **script.js**
+3. Go back to the index.html file and paste the following under **all the HTML content you want to load before JS content** (probably right before the closing body tag):
+```html
+<script src="script.js" />
 ```
 
 
