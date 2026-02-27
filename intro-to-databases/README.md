@@ -3,7 +3,7 @@
 **Date of Workshop:** March 1, 2026
 
 
-**Teacher:** [Kaelyn Yang] (https://github.com/Kaelynsyang)
+**Teacher:** [Kaelyn Yang](https://github.com/Kaelynsyang)
 
 Hello! Welcome to the Intro to Databases workshop for HOTHXIII. We will go over what databases are and their purposes, as well as CRUD operations. Additionally, you will learn how to set up your own database with MongoDB and use CRUD.
 
@@ -30,7 +30,7 @@ Data is any information that is raw, which means that it has not been processed 
 Databases are these containers to store the data or information in an organized and easily accessible way. 
 They can include tables with rows and columns, indexes that allow for easier access to the data and information on how to manage or control the database, which is database management.
 
---
+---
 
 ## Purpose of Databases
 
@@ -43,7 +43,7 @@ They can include tables with rows and columns, indexes that allow for easier acc
 - Consistent
 - **Make cool things!**
 
---
+---
 
 ## Different types of Databases
 
@@ -57,14 +57,14 @@ The similarities is that they both are able to store data, use CRUD operations w
 SQL (Structured Query Language) Examples: Banking Systems, University Systems
 noSQL Examples: Catalog management, Chat Applications, E-commerce or online shopping
 
---
+---
 
 ## Setting up example with MongoDB
 
 Go to [MongoDB](https://www.mongodb.com/) and create an account or sign in if you have one.
 Create a new project, add a cluster (allow access from anywhere), and create a database user.
 
---
+---
 
 ## CRUD operations
 
@@ -149,7 +149,7 @@ app.post('/delete', async (req, res) => {
 });
 ```
 
---
+---
 
 ## Demo with MongoDB
 
@@ -273,6 +273,6 @@ app.listen(PORT, () => {
 
 You can use CRUD operations with [Postman](https://www.postman.com/) to make sure it works. Postman is a database API testing tool.
 
---
+---
 
 Thank you and happy hacking!
