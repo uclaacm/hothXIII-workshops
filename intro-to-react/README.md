@@ -8,7 +8,7 @@
 Hi! This workshop introduces the basics of React.js. Learn how to use React's core concepts — components, props, state, and event handling — by building a React Trivia Quiz app.
 
 - [Slides](https://docs.google.com/presentation/d/1NLaZyaPtMk3RE-yQaOyS7xDmTxHlo0hCkusFIUvFCEM/edit?usp=sharing)
-- [Workshop Recording](https://drive.google.com/file/d/1W_xpwDBYOmn38Ls_3uhBLjeZ2_4Fs9Zw/view?usp=share_link)
+- [Workshop Recording](https://drive.google.com/file/d/1wT9HlddmdqXjtfMgMwryi5Kl9Mbe_aR2/view?usp=share_link)
 
 ---
 ## Set Up
